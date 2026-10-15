@@ -11,7 +11,7 @@
         "format": "prettier --write .",
         "type-check": "tsc --noEmit",
         "check": "pnpm lint && pnpm format-check && pnpm type-check",
-        "setup-dev": "git config core.hooksPath .githooks"
+        "setup-dev": "git config core.hooksPath .githooks && pnpm exec next typegen"
     },
     "dependencies": {
         "@base-ui/react": "^1.9.0",
