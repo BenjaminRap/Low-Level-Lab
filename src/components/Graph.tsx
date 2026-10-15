@@ -10,6 +10,8 @@ import {
     OnNodesChange,
     OnEdgesChange,
     OnConnect,
+    Background,
+    BackgroundVariant,
 } from "@xyflow/react";
 
 export type GraphProps = {
@@ -46,7 +48,9 @@ export default function Graph({
                 onEdgesChange={onEdgesChange}
                 onConnect={onConnect}
                 fitView
-            />
+            >
+                <Background color="#ccc" variant={BackgroundVariant.Cross} />
+            </ReactFlow>
         </div>
     );
 }
