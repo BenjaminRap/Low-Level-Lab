@@ -10,7 +10,8 @@
         "format-check": "prettier --check .",
         "format": "prettier --write .",
         "type-check": "tsc --noEmit",
-        "check": "pnpm lint && pnpm format-check && pnpm type-check"
+        "check": "pnpm lint && pnpm format-check && pnpm type-check",
+        "setup-dev": "git config core.hooksPath .githooks"
     },
     "dependencies": {
         "@base-ui/react": "^1.9.0",
