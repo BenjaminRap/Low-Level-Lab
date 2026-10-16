@@ -6,7 +6,7 @@ export type PCNodeData = Node<Record<string, never>, "PCNode">;
 
 export default function PCNode({}: NodeProps<PCNodeData>) {
     return (
-        <div className="w-2xs border-solid border-[thin] border-black">
+        <div className="w-2xs border-solid border-[thin] border-black hardware-node comb-node">
             <div className="text-center">PC</div>
             <Handle type="source" position={Position.Top} id="pc-output" />
             <Handle

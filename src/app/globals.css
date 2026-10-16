@@ -81,6 +81,14 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+    --comb-node-color: oklch(0.87 0 0);
+    --comb-node-radius: var(--radius-sm);
+    --label-node-color: oklch(1 0 0);
+    --label-node-radius: 50%;
+    --clocked-reg-node-color: oklch(1 0 0);
+    --clocked-reg-node-radius: var(--radius-sm);
+    --unit-node-color: oklch(0.8253 0.0762 260.82);
+    --unit-node-radius: var(--radius-sm);
 }
 
 .dark {
@@ -127,5 +135,32 @@
     }
     html {
         @apply font-sans;
+    }
+}
+
+@layer components {
+    .hardware-node {
+        background-color: var(--hardware-node-bg);
+        border-radius: var(--hardware-node-radius);
+    }
+
+    .comb-node {
+        --hardware-node-bg: var(--comb-node-color);
+        --hardware-node-radius: var(--comb-node-radius);
+    }
+
+    .label-node {
+        --hardware-node-bg: var(--label-node-color);
+        --hardware-node-radius: var(--label-node-radius);
+    }
+
+    .clocked-reg-node {
+        --hardware-node-bg: var(--clocked-reg-node-color);
+        --hardware-node-radius: var(--clocked-reg-node-radius);
+    }
+
+    .unit-node {
+        --hardware-node-bg: var(--unit-node-color);
+        --hardware-node-radius: var(--unit-node-radius);
     }
 }
