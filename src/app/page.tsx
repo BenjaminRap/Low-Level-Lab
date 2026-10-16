@@ -5,7 +5,12 @@ import { CPUNodes } from "@/components/CPUNodes/CPUNodes";
 
 export default function Home() {
     const initialNodes: CPUNodes[] = [
-        { id: "n1", position: { x: 0, y: 100 }, data: {}, type: "PCNode" },
+        {
+            id: "n1",
+            position: { x: 0, y: 100 },
+            data: { label: "PC" },
+            type: "LabelNode",
+        },
         { id: "n2", position: { x: 0, y: 0 }, data: {}, type: "PCNode" },
     ];
     const initialEdges: Edge[] = [
