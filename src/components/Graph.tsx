@@ -13,6 +13,7 @@ import {
     Background,
     BackgroundVariant,
 } from "@xyflow/react";
+import { nodeTypes } from "./CPUNodes/CPUNodes";
 
 export type GraphProps = {
     className?: string;
@@ -47,6 +48,7 @@ export default function Graph({
                 onNodesChange={onNodesChange}
                 onEdgesChange={onEdgesChange}
                 onConnect={onConnect}
+                nodeTypes={nodeTypes}
                 fitView
             >
                 <Background color="#ccc" variant={BackgroundVariant.Cross} />
