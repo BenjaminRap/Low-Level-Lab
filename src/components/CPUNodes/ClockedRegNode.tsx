@@ -13,7 +13,18 @@ export default function ClockedRegNode({
     return (
         <div className="border-solid border-[thin] border-black hardware-node clocked-reg-node flex flex-row items-center">
             <Handle type="source" position={Position.Top} />
-            <Handle type="target" position={Position.Bottom} />
+            <Handle
+                type="target"
+                position={Position.Bottom}
+                id="source"
+                className="left-1/3"
+            />
+            <Handle
+                type="target"
+                position={Position.Bottom}
+                id="clock"
+                className="left-2/3"
+            />
             <div className="ml-1 mr-1 text-center">{data.name}</div>
         </div>
     );
