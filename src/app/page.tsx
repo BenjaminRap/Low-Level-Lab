@@ -6,6 +6,12 @@ import { CPUNodes } from "@/components/CPUNodes/CPUNodes";
 export default function Home() {
     const initialNodes: CPUNodes[] = [
         {
+            id: "clock",
+            position: { x: 200, y: 150 },
+            data: {},
+            type: "ClockNode",
+        },
+        {
             id: "pIcodeReg",
             position: { x: 0, y: 100 },
             data: { name: "pIcode" },
@@ -45,36 +51,76 @@ export default function Home() {
     ];
     const initialEdges: Edge[] = [
         {
-            id: "piCodeReg-PC",
+            id: "clock-pIcodeReg",
+            source: "clock",
+            target: "pIcodeReg",
+            targetHandle: "source",
+            type: "step",
+        },
+        {
+            id: "clock-pCndReg",
+            source: "clock",
+            target: "pCndReg",
+            targetHandle: "source",
+            type: "step",
+        },
+        {
+            id: "clock-pValMReg",
+            source: "clock",
+            target: "pValMReg",
+            targetHandle: "source",
+            type: "step",
+        },
+        {
+            id: "clock-pValCReg",
+            source: "clock",
+            target: "pValCReg",
+            targetHandle: "source",
+            type: "step",
+        },
+        {
+            id: "clock-pValPReg",
+            source: "clock",
+            target: "pValPReg",
+            targetHandle: "source",
+            type: "step",
+        },
+        {
+            id: "pIcodeReg-PC",
             source: "pIcodeReg",
             target: "PC",
             targetHandle: "pIcode",
+            type: "step",
         },
         {
             id: "pCndReg-PC",
             source: "pCndReg",
             target: "PC",
             targetHandle: "pCnd",
+            type: "step",
         },
         {
             id: "pValMReg-PC",
             source: "pValMReg",
             target: "PC",
             targetHandle: "pValM",
+            type: "step",
         },
         {
             id: "pValCReg-PC",
             source: "pValCReg",
             target: "PC",
             targetHandle: "pValC",
+            type: "step",
         },
         {
             id: "pValPReg-PC",
             source: "pValPReg",
             target: "PC",
             targetHandle: "pValP",
+            type: "step",
         },
-        { id: "PC-PCLabel", source: "PC", target: "PCLabel" },
+        { id: "PC-PCLabel", source: "PC", target: "PCLabel", type: "step" },
     ];
 
     return (
