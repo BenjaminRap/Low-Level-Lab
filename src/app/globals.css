@@ -39,6 +39,9 @@
     --color-popover: var(--popover);
     --color-card-foreground: var(--card-foreground);
     --color-card: var(--card);
+    --radius-4xs: calc(var(--radius) * 0.1);
+    --radius-2xs: calc(var(--radius) * 0.2);
+    --radius-xs: calc(var(--radius) * 0.4);
     --radius-sm: calc(var(--radius) * 0.6);
     --radius-md: calc(var(--radius) * 0.8);
     --radius-lg: var(--radius);
@@ -86,7 +89,7 @@
     --label-node-color: oklch(1 0 0);
     --label-node-radius: 50%;
     --clocked-reg-node-color: oklch(1 0 0);
-    --clocked-reg-node-radius: var(--radius-sm);
+    --clocked-reg-node-radius: var(--radius-2xs);
     --unit-node-color: oklch(0.8253 0.0762 260.82);
     --unit-node-radius: var(--radius-sm);
 }

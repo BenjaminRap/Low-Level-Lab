@@ -1,5 +1,3 @@
-"use client";
-
 import { Handle, Node, NodeProps, Position } from "@xyflow/react";
 
 export type PCNodeData = Node<Record<string, never>, "PCNode">;
